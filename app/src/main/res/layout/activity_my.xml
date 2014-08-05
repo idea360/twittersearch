@@ -1,0 +1,73 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity"
+    android:id="@+id/gridLayout"
+    android:columnCount="1"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_blue_dark">
+
+    <EditText
+        android:id="@+id/querryEditText"
+        android:layout_column="0"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/queryPrompt"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:gravity="fill_horizontal"
+        android:imeOptions="actionNext"/>
+
+    <LinearLayout
+        android:layout_gravity="fill_horizontal" >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tagEditText"
+            android:layout_gravity="bottom|fill_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/tagPrompt"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:imeOptions="actionDone"/>
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/saveDescription"
+            android:background="@android:drawable/ic_menu_save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_gravity="fill"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/holo_blue_light"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Tagged Searches"
+            android:textColor="@android:color/white"
+            android:paddingTop="@dimen/activity_horizontal_margin"/>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="fill"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="8dp">
+        </ListView>
+    </LinearLayout>
+</GridLayout>
